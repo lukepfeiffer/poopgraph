@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %title Poopgraph
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    %section#main
+      %header
+        %h1 Poop Graph
+      %section#content= yield
