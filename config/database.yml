@@ -3,7 +3,7 @@ development:
   encoding: unicode
   database: poopgraph_development
 
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
   database: poopgraph_test
@@ -12,3 +12,6 @@ production:
   adapter: postgresql
   encoding: unicode
   database: poopgraph_production
+
+cucumber:
+  <<: *test
