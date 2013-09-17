@@ -3,10 +3,12 @@
 
 body
   background: image_url('bg.png')
+  background: #323243
+  background: #ccc
   font-family: "Helvetica", "Arial"
 
 section#main
-  width: 500px
+  width: 460px
   margin: 0 auto
 
   & > header
@@ -22,3 +24,81 @@ section#content
   border-radius: 3px
   min-height: 500px
   padding: 25px
+  h1
+    font-weight: normal
+
+form.poop
+  h1
+    padding: 10px 0
+    font-size: 20px
+    font-weight: bold
+    border-bottom: solid 1px #ccc
+
+  fieldset
+    padding: 20px 0 0 0
+    li
+      padding: 5px 0
+      input
+        +box-sizing
+        width: 230px
+        height: 45px
+        border-radius: 3px
+        padding-left: 5px
+        font-size: 14px
+        border: solid 1px #ccc
+
+  fieldset.poop
+    float: left
+    margin-right: 10px
+
+  fieldset.colors
+    width: 165px
+    float: left
+    +box-sizing
+    div
+      width: 45px
+      height: 45px
+      float: left
+      border: solid 1px #ccc
+      margin: 5px
+      border-radius: 3px
+      +box-sizing
+      overflow: hidden
+      font-size: 12px
+      padding: 2px
+    div:nth-child(1), div:nth-child(2), div:nth-child(3)
+      margin-top: 0
+    .brown
+      background-color: #694707
+    .light_brown
+      background-color: #8a5c04
+    .black
+      background-color: #191202
+      color: #fff
+    .red
+      background-color: #ae2505
+    .orange
+      background-color: #be5303
+    .green
+      background-color: #5b7706
+    .gray
+      background-color: #5b5b59
+    .light_green
+      background-color: #b6b10b
+    .dark_brown
+      background-color: #611901
+
+  fieldset.user
+    h2
+      font-weight: normal
+      margin: 10px 0
+      a
+        text-decoration: none
+      a.active
+        font-weight: bold
+        color: #000000
+        border-bottom: solid 2px green
+
+  fieldset.user
+    input[type=text], input[type=password], input[type=email]
+      width: 100%

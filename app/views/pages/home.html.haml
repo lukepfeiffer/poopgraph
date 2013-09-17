@@ -1,27 +1,43 @@
-%h1
-  Fill out the form for every time you poop:
+%form.poop
+  %h1 Fill out the form for every time you poop
+  %fieldset.poop
+    %p Fill out what you can:
+    %ul
+      %li
+        %input(placeholder='Poop time (minutes)' type='number')
+      %li
+        %input(placeholder='Poop type (1-7)')
+      %li
+        %input(placeholder='Weight (pounds)')
 
-%form
-  %input(placeholder = 'Poop time (minutes)') 
-  %input(placeholder = 'Poop type (1-7)')
-  %input(placeholder = 'Weight')
+  %fieldset.colors
+    %p Pick a color
+    %ul
+      %li.colors
+        .brown brown
+        .light_brown light brown
+        .black black
+        .red red
+        .orange orange
+        .green green
+        .gray gray
+        .light_green light green
+        .dark_brown dark brown
 
 
-  %div brown
-  %div light brown
-  %div black
-  %div red
-  %div orange
-  %div green
-  %div gray
-  %div light green
-  %div dark brown
-
-  %h2
-    Sign up or 
-    %a Sign In
-  %input(placeholder = 'Username')
-  %input(placeholder = 'Email')
-  %input(placeholder = 'Password')
-  %input(placeholder = 'Password Confirmation')
-  %input(type = 'submit')
+  %fieldset.user
+    %h2
+      %a.active(href="#") Sign up
+      or
+      %a(href="#") Sign In
+    %ul
+      %li
+        %input(placeholder='Username' type='text')
+      %li
+        %input(placeholder='Email' type='email')
+      %li
+        %input(placeholder='Password' type='password')
+      %li
+        %input(placeholder='Password Confirmation' type='password')
+      %li
+        %input(type='submit')
