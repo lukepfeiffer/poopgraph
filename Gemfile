@@ -15,3 +15,7 @@ group :test, :devolopment do
   gem 'pry-rails'
   gem 'fabrication'
 end
+
+group :test do
+  gem 'database_cleaner'
+end
