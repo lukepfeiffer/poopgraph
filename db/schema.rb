@@ -11,6 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130917223015) do
+
+  create_table "dumps", force: true do |t|
+    t.decimal  "duration"
+    t.string   "kind"
+    t.decimal  "weight"
+    t.string   "color"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

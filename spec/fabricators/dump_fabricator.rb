@@ -1,0 +1,2 @@
+Fabricator :dump do
+end
