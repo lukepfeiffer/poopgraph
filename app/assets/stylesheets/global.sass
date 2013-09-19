@@ -36,16 +36,16 @@ form.poop
 
   fieldset
     padding: 20px 0 0 0
+    input
+      +box-sizing
+      width: 230px
+      height: 45px
+      border-radius: 3px
+      padding-left: 5px
+      font-size: 14px
+      border: solid 1px #ccc
     li
       padding: 5px 0
-      input
-        +box-sizing
-        width: 230px
-        height: 45px
-        border-radius: 3px
-        padding-left: 5px
-        font-size: 14px
-        border: solid 1px #ccc
 
   fieldset.poop
     float: left
@@ -102,3 +102,11 @@ form.poop
   fieldset.user
     input[type=text], input[type=password], input[type=email]
       width: 100%
+  fieldset.actions
+    input[type=submit]
+      +gradient-bg(#187c0a, #085727)
+      font-size: 16px
+      color: #fff
+      font-weight: bold
+      &:active
+        +gradient-bg(#085727, #187c0a)
