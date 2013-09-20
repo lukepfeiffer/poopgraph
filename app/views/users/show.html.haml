@@ -1,0 +1,9 @@
+%table
+  %tbody
+    - dumps.each do |dump|
+      %tr
+        %td= dump.color
+        %td= dump.weight
+        %td= dump.kind
+        %td= dump.duration
+

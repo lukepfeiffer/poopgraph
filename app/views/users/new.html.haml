@@ -1,0 +1,53 @@
+= form_for user, html: {class: 'poop'} do |f|
+  %h1 Fill out the form for every time you poop
+  = f.fields_for :dumps, dump do |d|
+    %fieldset.poop
+      %p Fill out what you can:
+      %ul
+        %li
+          = d.label :duration
+          = d.number_field :duration, placeholder: "Poop time (minues)"
+        %li
+          = d.label :kind
+          = d.text_field :kind, placeholder: "Poop Type"
+        %li
+          = d.label :weight
+          = d.number_field :weight, placeholder: "Weight (pounds)"
+    %fieldset.colors
+      %p Pick a color
+      = d.hidden_field :color
+      %ul
+        %li.colors
+          .brown brown
+          .light_brown light brown
+          .black black
+          .red red
+          .orange orange
+          .green green
+          .gray gray
+          .light_green light green
+          .dark_brown dark brown
+
+
+  %fieldset.user
+    %h2
+      %a.active(href="#") Sign up
+      or
+      %a(href="#") Sign In
+
+    %ul
+      %li
+        = f.label :username
+        = f.text_field :username, placeholder: "Username"
+      %li
+        = f.label :email
+        = f.email_field :email, placeholder: "Email"
+      %li
+        = f.label :password
+        = f.password_field :password, placeholder: "Password"
+      %li
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, placeholder: "Password confirmation"
+
+  %fieldset.actions
+    = f.submit "Submit"

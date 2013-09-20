@@ -1,3 +1,5 @@
 Poopgraph::Application.routes.draw do
-    root 'pages#home'
-  end
+  root 'users#new'
+
+  resources :users, only: [:new, :create, :show]
+end
