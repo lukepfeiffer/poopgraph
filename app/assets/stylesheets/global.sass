@@ -33,12 +33,12 @@ form.poop
     font-size: 20px
     font-weight: bold
     border-bottom: solid 1px #ccc
-
   fieldset
     padding: 20px 0 0 0
+    label
+      display: block
     input
       +box-sizing
-      width: 230px
       height: 45px
       border-radius: 3px
       padding-left: 5px
@@ -46,49 +46,32 @@ form.poop
       border: solid 1px #ccc
     li
       padding: 5px 0
+      float: left
 
   fieldset.poop
-    float: left
     margin-right: 10px
 
-  fieldset.colors
-    width: 165px
-    float: left
-    +box-sizing
+  fieldset.colors, fieldset.kinds
     div
       width: 45px
       height: 45px
       float: left
       border: solid 1px #ccc
+      color: #efefef
+      font-weight: bold
       margin: 5px
-      border-radius: 3px
-      +box-sizing
+      border-radius: 5px
       overflow: hidden
       font-size: 12px
       padding: 2px
-    div:nth-child(1), div:nth-child(2), div:nth-child(3)
-      margin-top: 0
-    .brown
-      background-color: #694707
-    .light_brown
-      background-color: #8a5c04
-    .black
-      background-color: #191202
-      color: #fff
-    .red
-      background-color: #ae2505
-    .orange
-      background-color: #be5303
-    .green
-      background-color: #5b7706
-    .gray
-      background-color: #5b5b59
-    .light_green
-      background-color: #b6b10b
-    .dark_brown
-      background-color: #611901
+
+  fieldset.kinds
+    div
+      background: #fff
+      color: #bbbbbb
 
   fieldset.user
+    clear: both
     h2
       font-weight: normal
       margin: 10px 0

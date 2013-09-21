@@ -1,15 +1,28 @@
 class Dump < ActiveRecord::Base
 
-  TYPES= %W(
+  belongs_to :user
+
+  KINDS = %W(
     nut
     lumpy
     sausage
-    shake
+    snake
     blobs
     fluffy
     watery
   )
 
-  belongs_to :user
+  COLORS = {
+    brown:         "#694707",
+    light_brown:   "#8a5c04",
+    black:         "#191202",
+    red:           "#ae2505",
+    orange:        "#be5303",
+    green:         "#5b7706",
+    gray:          "#5b5b59",
+    light_green:   "#b6b10b",
+    dark_brown:    "#611901"
+  }
+
 
 end
