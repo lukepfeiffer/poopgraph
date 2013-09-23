@@ -10,6 +10,7 @@ gem 'haml-rails'
 gem 'formal'
 
 group :test, :devolopment do
+  gem 'cucumber', '1.3.0'
   gem 'cucumber-rails'
   gem 'rspec-rails'
   gem 'pry-rails'
