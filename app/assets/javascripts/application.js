@@ -13,3 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+
+	$('a.sign_up, a.sign_in').click(function(e){
+		e.preventDefault();
+
+		$('ul.sign_up').toggle();
+		$('ul.sign_in').toggle();
+
+		$('a.sign_up').toggleClass('active');
+		$('a.sign_in').toggleClass('active');
+	});
+
+});
