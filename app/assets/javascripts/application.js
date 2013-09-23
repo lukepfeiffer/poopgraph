@@ -26,4 +26,17 @@ $(function(){
 		$('a.sign_in').toggleClass('active');
 	});
 
+
+	$('.colors li div, .kinds li div').click(function(){
+		var clicked_link = $(this);
+		if (clicked_link.hasClass('active')){
+			clicked_link.closest('ul').find('div').removeClass('active');
+			clicked_link.closest('fieldset').find('input').val('');
+		}else{
+			$(clicked_link).closest('ul').find('div').removeClass('active');
+			clicked_link.addClass('active');
+			clicked_link.closest('fieldset').find('input').val(clicked_link.data('value'));
+		}
+	});
+
 });

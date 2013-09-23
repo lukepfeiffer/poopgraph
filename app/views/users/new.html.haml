@@ -18,7 +18,8 @@
         %li
           - Dump::COLORS.each do |color_name, color_hex|
             %div{ class: color_name,
-              style: "background: #{color_hex}"}
+              style: "background: #{color_hex}",
+              data: { value: color_name } }
               = color_name.to_s.humanize
 
     %fieldset.kinds
@@ -27,7 +28,9 @@
       %ul
         %li
           - Dump::KINDS.each do |kind|
-            %div(class="#{kind}")= kind.humanize
+            %div{class: kind,
+              data: { value: kind }}
+              = kind.humanize
 
   %fieldset.user
     %h2
