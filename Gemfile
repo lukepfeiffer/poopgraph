@@ -1,4 +1,7 @@
+ruby '2.0.0'
+
 source 'https://rubygems.org'
+
 gem 'rails', '4.0.0'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
@@ -8,6 +11,7 @@ gem 'jquery-rails'
 gem 'decent_exposure'
 gem 'haml-rails'
 gem 'formal'
+gem 'puma'
 
 group :test, :devolopment do
   gem 'cucumber', '1.3.0'
