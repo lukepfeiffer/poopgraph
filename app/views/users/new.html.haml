@@ -2,14 +2,13 @@
   %h1 Fill this out when you poop:
   = f.fields_for :dumps, dump do |d|
     %fieldset.poop
-      %p Fill out what you can:
       %ul
         %li
           = d.label :duration
-          = d.number_field :duration, placeholder: "Poop time (minues)"
+          = d.number_field :duration, min: 0, placeholder: "Poop time (minues)"
         %li
           = d.label :weight
-          = d.number_field :weight, placeholder: "Weight (pounds)"
+          = d.number_field :weight, min: 0, placeholder: "Weight (pounds)"
 
     %fieldset.colors
       = d.hidden_field :color
