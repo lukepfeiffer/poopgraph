@@ -21,3 +21,5 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
 end
+
+gem 'rails_12factor' , group: :production
