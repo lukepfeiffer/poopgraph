@@ -7,6 +7,7 @@ body
 section#main
   max-width: 455px
   margin: 0 auto
+  padding: 20px
 
   & > header
     padding: 34px 0 24px 0
@@ -114,3 +115,11 @@ form.poop
       font-weight: bold
       &:active
         +gradient-bg(#085727, #187c0a)
+
+@media (max-width: 500px)
+  section#main
+    fieldset
+      li
+        width: 100%
+        input
+          width: 100%
