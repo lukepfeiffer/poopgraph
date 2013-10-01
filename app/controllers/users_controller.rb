@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
 
-  expose(:user)
+  expose(:user, attributes: :user_params)
   expose(:dumps)
   expose(:dump)
 
   def create
-    if new_user = User.new(user_params).save
+    if user.save
       redirect_to user_path(new_user)
     else
       render :new
