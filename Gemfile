@@ -19,6 +19,7 @@ group :test, :devolopment do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'fabrication'
+  gem 'capybara-webkit'
 end
 
 group :test do

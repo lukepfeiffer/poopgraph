@@ -1,3 +1,4 @@
+@javascript
 Feature: Dump
   Scenario: New user records new dump
 
@@ -13,14 +14,3 @@ Feature: Dump
 
     Then I see "6"
     And I see "5"
-
-  @javascript
-  Scenario: User signs in
-    Given the following users:
-      | username | email            |
-      | user     | user@example.com |
-    Given I am on the home page
-    When I click "Sign in"
-    And I fill in "email" with "user@example.com"
-    And I fill in "password" with "password"
-    Then I should be on my user show page
