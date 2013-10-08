@@ -14,3 +14,14 @@ Feature: Dump
 
     Then I see "6"
     And I see "5"
+
+
+  Scenario: New user records new dump
+      Given I am on the home page
+      When I press "Submit"
+      Then I should see "Username cannot be blank"
+      And I should see "Email cannot be blank"
+      And I should see "Password cannot be blank"
+      And I should see "Password confirmation cannot be blank"
+      And I should see "Type cannot be blank"
+      And I should see "Color cannot be blank"
