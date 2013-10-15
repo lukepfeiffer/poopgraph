@@ -9,7 +9,7 @@ Feature: Dump
     And I fill in "Username" with "mrmicahcooper"
     And I fill in "Email" with "email@example.com"
     And I fill in "Password" with "password"
-    And I fill in "Password confirmation" with "passowrd"
+    And I fill in "Password confirmation" with "password"
     And I press "Submit"
 
     Then I see "6"
@@ -19,9 +19,9 @@ Feature: Dump
   Scenario: New user records new dump
       Given I am on the home page
       When I press "Submit"
-      Then I should see "Username cannot be blank"
-      And I should see "Email cannot be blank"
-      And I should see "Password cannot be blank"
-      And I should see "Password confirmation cannot be blank"
-      And I should see "Type cannot be blank"
-      And I should see "Color cannot be blank"
+      Then I see "Username can't be blank"
+      And I see "Email is invalid"
+      And I see "Password can't be blank"
+      And I see "Password confirmation doesn't match Password"
+      And I see "can't be blank"
+      And I see "Color can't be blank"

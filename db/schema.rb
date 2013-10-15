@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917223015) do
+ActiveRecord::Schema.define(version: 20131010222742) do
 
   create_table "dumps", force: true do |t|
     t.decimal  "duration"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 20130917223015) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remember_token"
+    t.string   "reset_password_token"
+    t.string   "session_token"
   end
 
 end

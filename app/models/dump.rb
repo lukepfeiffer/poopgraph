@@ -2,6 +2,8 @@ class Dump < ActiveRecord::Base
 
   belongs_to :user
 
+  validates_presence_of :kind
+
   KINDS = %W(
     nut
     lumpy
@@ -23,6 +25,5 @@ class Dump < ActiveRecord::Base
     light_green:   "#b6b10b",
     dark_brown:    "#611901"
   }
-
 
 end

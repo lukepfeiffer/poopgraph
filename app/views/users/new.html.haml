@@ -23,7 +23,7 @@
 
     %fieldset.kinds
       = d.hidden_field :kind
-      %p Pick a type
+      %p= f.label :kind, 'Type'
       %ul
         %li
           - Dump::KINDS.each do |kind|
@@ -53,11 +53,11 @@
 
     %ul.sign_in
       %li
-        = f.label :login, "Username or email"
-        = f.text_field :username, placeholder: "Username or email"
-      %li
-        = f.label :password
-        = f.password_field :password, placeholder: "Password"
+        -# = f.label :login, "Username or email"
+        -# = f.text_field :username, placeholder: "Username or email"
+      -# %li
+        -# = f.label :password
+        -# = f.password_field :password, placeholder: "Password"
 
   %fieldset.actions
     = f.submit "Submit"
