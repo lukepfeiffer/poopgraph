@@ -1,8 +1,8 @@
 class Dump < ActiveRecord::Base
 
   belongs_to :user
-
-  validates_presence_of :kind
+  validates :kind, :color, presence: true,
+                           length:{ minimum: 1}
 
   KINDS = %W(
     nut
@@ -25,5 +25,11 @@ class Dump < ActiveRecord::Base
     light_green:   "#b6b10b",
     dark_brown:    "#611901"
   }
+  private
+    def kind_not_blank
+      if kind.blank?
+        I18n.t('errors.messages.blank')
+      end
+    end
 
 end
