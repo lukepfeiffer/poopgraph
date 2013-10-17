@@ -1,6 +1,6 @@
 = form_for user, html: {class: 'poop'} do |f|
   %h1 Fill this out when you poop:
-  = f.fields_for :dumps, dump do |d|
+  = f.fields_for :dumps do |d|
     %fieldset.poop
       %ul
         %li
@@ -9,25 +9,24 @@
         %li
           = d.label :weight
           = d.number_field :weight, min: 0, placeholder: "Weight (pounds)"
-
     %fieldset.colors
       = d.hidden_field :color
       %p Pick a color
       %ul
         %li
           - Dump::COLORS.each do |color_name, color_hex|
-            %div{ class: color_name,
+            %div.color{ class: color_name,
               style: "background: #{color_hex}",
               data: { value: color_name } }
               = color_name.to_s.humanize
 
     %fieldset.kinds
       = d.hidden_field :kind
-      %p= f.label :kind, 'Type'
+      %p= d.label :kind, 'Type'
       %ul
         %li
           - Dump::KINDS.each do |kind|
-            %div{class: kind,
+            %div.kind{class: kind,
               data: { value: kind }}
               = kind.humanize
 

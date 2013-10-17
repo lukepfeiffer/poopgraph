@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
 
   expose(:user, attributes: :user_params)
-  expose(:dumps)
-  expose(:dump)
+
+  def new
+    user.dumps.build
+    render 'new'
+  end
 
   def create
     if user.save
@@ -12,6 +15,8 @@ class UsersController < ApplicationController
     end
   end
 
+  private
+
   def user_params
     params.require(:user).permit(
       :username,
@@ -19,11 +24,12 @@ class UsersController < ApplicationController
       :password,
       :password_confirmation,
       dumps_attributes: [
-        :color,
-        :duration,
         :kind,
-        :weight
+        :color,
+        :weight,
+        :duration
       ]
+
     )
   end
 

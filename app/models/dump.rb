@@ -2,7 +2,8 @@ class Dump < ActiveRecord::Base
 
   belongs_to :user
 
-  validates_presence_of :kind
+  validates :kind, presence: true
+
 
   KINDS = %W(
     nut
