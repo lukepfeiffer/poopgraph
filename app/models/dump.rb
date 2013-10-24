@@ -2,8 +2,7 @@ class Dump < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :kind, presence: true, message: "ballin"
-end
+  validates :kind, presence: true
 
 
   KINDS = %W(
