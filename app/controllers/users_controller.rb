@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   expose(:user, attributes: :user_params)
+  expose(:dumps) { user.dumps }
 
   def new
     user.dumps.build
