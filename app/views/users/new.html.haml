@@ -15,7 +15,7 @@
       %ul
         %li
           - Dump::COLORS.each do |color_name, color_hex|
-            %div.color{ class: color_name,
+            %div.color{class: [color_name, active?(color_name, d.object.color)],
               style: "background: #{color_hex}",
               data: { value: color_name } }
               = color_name.to_s.humanize
@@ -26,8 +26,7 @@
       %ul
         %li
           - Dump::KINDS.each do |kind|
-            %div.kind{class: kind,
-              data: { value: kind }}
+            %div.kind{class: [kind, active?(kind, d.object.kind)] , data: { value: kind }}
               = kind.humanize
 
   %fieldset.user
