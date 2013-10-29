@@ -30,12 +30,12 @@ $(function(){
 	$('.colors li div, .kinds li div').click(function(){
 		var clicked_link = $(this);
 		if (clicked_link.hasClass('active')){
-			clicked_link.closest('ul').find('div').removeClass('active');
-			clicked_link.closest('fieldset').find('input').val('');
+			clicked_link.closest('ul').find('div').removeClass('active');// remove active class from all divs
+			clicked_link.closest('fieldset').find('input').val(''); //set the hidden input value to ''
 		}else{
-			$(clicked_link).closest('ul').find('div').removeClass('active');
-			clicked_link.addClass('active');
-			clicked_link.closest('fieldset').find('input').val(clicked_link.data('value'));
+			$(clicked_link).closest('ul').find('div').removeClass('active'); // remove active class from all divs
+			clicked_link.addClass('active'); //add active class to clicked div
+			clicked_link.closest('fieldset').find('input').val(clicked_link.data('value'));// set the hidden input value to the value of the clicked div
 		}
 	});
 
