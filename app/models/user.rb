@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   include Authem::User
+  attr_accessor :login
 
   has_many :dumps
 
