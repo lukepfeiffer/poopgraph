@@ -31,31 +31,26 @@
 
   %fieldset.user
     %h2
-      = link_to "Sign up", "#", class: "sign_up active"
+      = link_to "Sign up", "#", class: "sign_up active", data: {action: '/users'}
       or
-      = link_to "Sign in", "#", class: "sign_in"
+      = link_to "Sign in", "#", class: "sign_in", data: { action: '/dumps' }
 
     %ul.sign_up
-      %li
+      %li.sign_up
         = f.label :username
         = f.text_field :username, placeholder: "Username"
-      %li
+      %li.sign_in
+        = f.label :login, "Username or email"
+        = f.text_field :login, placeholder: "Username or email"
+      %li.sign_up
         = f.label :email
         = f.email_field :email, placeholder: "Email"
       %li
         = f.label :password
         = f.password_field :password, placeholder: "Password"
-      %li
+      %li.sign_up
         = f.label :password_confirmation
         = f.password_field :password_confirmation, placeholder: "Password confirmation"
-
-    %ul.sign_in
-      %li
-        -# = f.label :login, "Username or email"
-        -# = f.text_field :username, placeholder: "Username or email"
-      -# %li
-        -# = f.label :password
-        -# = f.password_field :password, placeholder: "Password"
 
   %fieldset.actions
     = f.submit "Submit"
