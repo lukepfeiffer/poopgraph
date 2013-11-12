@@ -34,7 +34,7 @@ Feature: Dump
     When I fill in "Duration" with "5"
     And I fill in "Weight" with "6"
     And I click "Sign in"
-    And I fill in "Username or email" with "mrmicahcooper"
+    And I fill in "Username or email" with "Joe"
     And I fill in "Password" with "password"
     And I press "Submit"
     Then I see "6"
